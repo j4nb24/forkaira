@@ -23,44 +23,10 @@
       <br />
       <b> what colour are your pan... </b>
       <br />
-      <b> I would be very honoured if you would like to be my valentines? </b>
     </div>
-    <button class="answerButton" onclick="location.href='thankyou.html'">
-      Yes
+    <button class="answerButton" onclick="location.href='question.html'">
+      click here to finish the question
     </button>
-    <button class="answerButton" id="noButton">I no no wanna o(╥﹏╥)o</button>
-    <br />
-    <img
-      id="startImg"
-      src="me.jpg"
-      alt="cat asking question"
-      class="responsive"
-    />
-    <div id="audio-container">
-      <audio id="background-audio" autoplay loop>
-        <source src="meme.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-
-    <script>
-      let clickCount = 0;
-      document
-        .getElementById("noButton")
-        .addEventListener("click", function () {
-          clickCount++;
-          var images = ["angrykaiwa.jpg", "cat.gif", "angrykaijan.jpg"];
-          document.getElementById("startImg").src =
-            images[clickCount % images.length];
-
-          var yesButton = document.querySelector(
-            'button[onclick*="thankyou.html"]'
-          );
-          var currentFontSize = parseInt(
-            window.getComputedStyle(yesButton).fontSize
-          );
-          yesButton.style.fontSize = currentFontSize + 10 + "px";
-        });
-    </script>
+   
   </body>
 </html>
