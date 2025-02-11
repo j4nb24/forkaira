@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for Kaira</title>
+    <link rel="stylesheet" href="css/valentine.css" />
+    <script>
+      window.addEventListener("load", function () {
+        var audio = document.getElementById("background-audio");
+        audio.play();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="audio-container">
+      <audio id="background-audio" loop>
+        <source src="doobadoo.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div id="valentineQuestion">
+      <b>Hey Kaiwa, sorry it took a while, but least we here now hehe </b>
+      <br />
+      <b
+        >I know you're ill but it's time to grow the fuck up and fix up because
+        you, you lucky lady will be doing something very soon
+      </b>
+      <br />
+      <p>*depending on the outcome of this*</h4>
+      <br />
+      <b>but for now I do have one question to ask......</b>
+      <br />
+      <b> what colour are your pan... </b>
+      <br />
+      <b> I would be very honoured if you would like to be my valentines? </b>
+    </div>
+    <button class="answerButton" onclick="location.href='thankyou.html'">
+      Yes
+    </button>
+    <button class="answerButton" id="noButton">I no no wanna o(╥﹏╥)o</button>
+    <br />
+    <img
+      id="startImg"
+      src="me.jpg"
+      alt="cat asking question"
+      class="responsive"
+    />
+
+    <script>
+      let clickCount = 0;
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          clickCount++;
+          var images = ["angrykaiwa.jpg", "cat.gif", "angrykaijan.jpg"];
+          document.getElementById("startImg").src =
+            images[clickCount % images.length];
+
+          var yesButton = document.querySelector(
+            'button[onclick*="thankyou.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px";
+        });
+    </script>
+  </body>
+</html>
