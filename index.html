@@ -5,20 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>for Kaira</title>
     <link rel="stylesheet" href="css/valentine.css" />
-    <script>
-      window.addEventListener("load", function () {
-        var audio = document.getElementById("background-audio");
-        audio.play();
-      });
-    </script>
+ 
   </head>
   <body>
-    <div id="audio-container">
-      <audio id="background-audio" loop>
-        <source src="doobadoo.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+   
     <div id="valentineQuestion">
       <b>Hey Kaiwa, sorry it took a while, but least we here now hehe </b>
       <br />
@@ -46,6 +36,12 @@
       alt="cat asking question"
       class="responsive"
     />
+    <div id="audio-container">
+      <audio id="background-audio" loop>
+        <source src="doobadoo.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
     <script>
       let clickCount = 0;
